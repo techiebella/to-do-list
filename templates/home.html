@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <!-- 📊 STATS -->
+    <div class="stats">
+        <div class="stat-box">📌 Total: {{ total }}</div>
+        <div class="stat-box">✔ Completed: {{ completed }}</div>
+        <div class="stat-box">⏳ Pending: {{ pending }}</div>
+    </div>
+
+    <!-- ➕ ADD TASK -->
+    <div class="todo-card">
+
+        <h1 class="title">My Tasks</h1>
+
+        <form method="POST" class="task-form">
+            {% csrf_token %}
+            <input type="text" name="task" placeholder="Add new task..." required>
+            <button type="submit">➕ Add</button>
+        </form>
+
+        <!-- TASK LIST -->
+        <div class="task-list">
+
+            {% for task in tasks %}
+
+            <div class="task-item 
+                {{ task.priority }} 
+                {% if task.completed %}completed{% endif %} 
+                {% if task.is_overdue %}overdue{% endif %}"
+                id="task-{{task.id}}">
+
+                <!-- LEFT SIDE -->
+                <div class="task-left">
+                    <h3>{{ task.title }}</h3>
+
+                    <div class="meta">
+                        <span class="priority">🔥 {{ task.priority|capfirst }}</span>
+
+                        {% if task.due_date %}
+                            <span class="due">📅 {{ task.due_date }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- RIGHT ACTIONS -->
+                <div class="task-actions">
+
+                    <a href="{% url 'task_complete' task.id %}" class="complete-btn">
+                        {% if task.completed %}↩ Undo{% else %}✔ Done{% endif %}
+                    </a>
+
+                    <a href="{% url 'task_delete' task.id %}" class="delete-btn">❌</a>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+                <p class="empty">No tasks yet 🎯 Add your first task!</p>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

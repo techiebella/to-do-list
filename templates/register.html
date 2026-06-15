@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="auth-container fade-in">
+  <div class="auth-card">
+
+    <h2 class="text-center mb-3">✨ Create Account</h2>
+
+    <!-- 🔴 MESSAGES (ERROR / SUCCESS) -->
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {{ message.tags }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <!-- USERNAME -->
+      <div class="form-group">
+        <input type="text" name="username" placeholder=" " class="form-control" required>
+        <label>Username</label>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="form-group">
+        <input type="email" name="email" placeholder=" " class="form-control" required>
+        <label>Email</label>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="form-group">
+        <input type="password" name="password1" placeholder=" " class="form-control" required>
+        <label>Password</label>
+      </div>
+
+      <!-- CONFIRM PASSWORD -->
+      <div class="form-group">
+        <input type="password" name="password2" placeholder=" " class="form-control" required>
+        <label>Confirm Password</label>
+      </div>
+
+      <!-- SUBMIT -->
+      <button type="submit" class="btn-primary w-100">
+        Create Account
+      </button>
+    </form>
+
+    <p class="text-center mt-3">
+      Already have an account?
+      <a href="{% url 'login' %}" class="link-btn">Login</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

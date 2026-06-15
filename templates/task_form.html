@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="auth-container fade-in">
+
+    <div class="auth-card">
+
+        <h2 style="text-align: center; margin-bottom: 25px; color: #222;">
+            📝 Task Form
+        </h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <!-- TITLE -->
+            <div class="form-group">
+                <input type="text" name="title" class="form-control" placeholder=" " required>
+                <label>Task Title</label>
+            </div>
+
+            <!-- PRIORITY -->
+            <div class="form-group">
+                <select name="priority" class="form-control" required>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    <option value="low">Low</option>
+                </select>
+                <label>Priority</label>
+            </div>
+
+            <!-- DUE DATE -->
+            <div class="form-group">
+                <input type="date" name="due_date" class="form-control">
+                <label>Due Date</label>
+            </div>
+
+            <!-- SUBMIT -->
+            <button type="submit" class="btn-primary w-100">
+                💾 Save Task
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

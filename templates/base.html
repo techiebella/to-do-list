@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo Pro</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="light-mode">
+
+<!-- 🌈 Background Layer -->
+<div class="background"></div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <h2>✨ ToDo Pro</h2>
+
+    <div class="nav-right">
+
+        {% if user.is_authenticated %}
+            <span class="user-name">👋 {{ user.username }}</span>
+
+            <form method="POST" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="logout-btn">Logout</button>
+            </form>
+        {% endif %}
+
+        <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+    </div>
+</nav>
+
+<!-- ================= FLASH MESSAGES ================= -->
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<!-- ================= THEME SCRIPT ================= -->
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
+
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark-mode") ? "dark" : "light"
+    );
+}
+
+// Load theme on page load
+window.addEventListener("DOMContentLoaded", function () {
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "dark") {
+        document.body.classList.add("dark-mode");
+        document.body.classList.remove("light-mode");
+    } else {
+        document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
+    }
+
+    // Stagger animation for task cards
+    const taskCards = document.querySelectorAll('.task-card');
+    taskCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // Stagger animation for badges
+    const badges = document.querySelectorAll('.badge');
+    badges.forEach((badge, index) => {
+        badge.style.animationDelay = `${(index * 0.05) + 0.3}s`;
+    });
+
+    // Stagger animation for action buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach((btn, index) => {
+        btn.style.animationDelay = `${(index * 0.08) + 0.4}s`;
+    });
+});
+</script>
+
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>

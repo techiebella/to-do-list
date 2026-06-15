@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="auth-container">
+  <div class="auth-card">
+
+    <h2>👋 Welcome Back</h2>
+
+    <!-- 🔴 ERROR / MESSAGE SUPPORT -->
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {{ message.tags }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <!-- USERNAME -->
+      <div class="form-group">
+        <input type="text" name="username" class="form-control" placeholder=" " required>
+        <label>Username</label>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder=" " required>
+        <label>Password</label>
+      </div>
+
+      <!-- SUBMIT -->
+      <button type="submit" class="btn-primary">Login</button>
+    </form>
+
+    <p class="text-center">
+      Don't have an account?
+      <a href="{% url 'register' %}" class="link-btn">Create Account</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}
