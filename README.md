@@ -43,20 +43,41 @@ It includes authentication and full CRUD functionality (Create, Read, Update, De
 ---
 
 ## 📸 Screenshots
-Login page in Light Mode
-<img width="1917" height="851" alt="image" src="https://github.com/user-attachments/assets/41c81116-bfa0-4fe2-be30-7d6108a4973c" />
-Login page in Dark Mode
-<img width="1918" height="718" alt="image" src="https://github.com/user-attachments/assets/e274e065-2549-4efd-8e20-ef65aad6f5af" />
-Register form in Light Mode
-<img width="572" height="717" alt="image" src="https://github.com/user-attachments/assets/1a36ae18-e960-4d54-951e-1fd9535e8f6e" />
-Register form in Dark Mode
-<img width="422" height="586" alt="image" src="https://github.com/user-attachments/assets/7b8a02f7-327e-42ce-a8f6-ad86b1fb7140" />
-Home page in Light Mode
-<img width="1918" height="428" alt="image" src="https://github.com/user-attachments/assets/58fb7e2d-bdda-4aae-9283-7bb74bbe29b5" />
-Home page in Dark Mode
-<img width="1918" height="375" alt="image" src="https://github.com/user-attachments/assets/cddb527a-e655-466d-a11f-c2615b7708b0" />
-Task Form in Light Mode
-<img width="410" height="471" alt="image" src="https://github.com/user-attachments/assets/55124d5b-cb54-4a34-89ea-837ace2a86a2" />
+
+### Login Page (Light Mode)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/41c81116-bfa0-4fe2-be30-7d6108a4973c" width="900">
+</p>
+
+### Login Page (Dark Mode)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e274e065-2549-4efd-8e20-ef65aad6f5af" width="900">
+</p>
+
+### Register Form (Light Mode)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1a36ae18-e960-4d54-951e-1fd9535e8f6e" width="500">
+</p>
+
+### Register Form (Dark Mode)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7b8a02f7-327e-42ce-a8f6-ad86b1fb7140" width="500">
+</p>
+
+### Home Page (Light Mode)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/58fb7e2d-bdda-4aae-9283-7bb74bbe29b5" width="900">
+</p>
+
+### Home Page (Dark Mode)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cddb527a-e655-466d-a11f-c2615b7708b0" width="900">
+</p>
+
+### Task Form
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/55124d5b-cb54-4a34-89ea-837ace2a86a2" width="500">
+</p>
 
 
 
