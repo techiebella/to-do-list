@@ -68,23 +68,45 @@ This project was developed to strengthen Django development skills by implementi
 ```text
 to-do-list/
 │
-├── todo/
-├── users/
-├── templates/
-│   ├── registration/
-│   ├── todo/
-│   └── base.html
-│
 ├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
+│   └── css/
+│       └── style.css
 │
-├── manage.py
+├── staticfiles/
+│
+├── tasks/
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+│
+├── templates/
+│   ├── base.html
+│   ├── home.html
+│   ├── login.html
+│   ├── register.html
+│   ├── task_form.html
+│   └── task_list.html
+│
+├── todo_project/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── .gitignore
 ├── db.sqlite3
-├── requirements.txt
+├── LICENSE
+├── manage.py
 ├── README.md
-└── .gitignore
+└── requirements.txt
+```
 ```
 
 ---
