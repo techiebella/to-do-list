@@ -1,97 +1,61 @@
 <h1 align="center">📝 Django To-Do List App</h1>
 
 <p align="center">
-A simple and powerful task management web application built using Django 🚀
+A simple task management web application built with Django.
+</p>
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Django](https://img.shields.io/badge/Django-5.x-green)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 </p>
 
 ---
 
+## 🌐 Live Demo
+
+https://todolistapp-c14l.onrender.com
+
+> This application is hosted on Render's free plan. The first request may take 30–60 seconds if the server is inactive.
+
+---
+
 ## 🚀 About the Project
-This is a full-stack Django To-Do application that helps users manage daily tasks efficiently.  
-It includes authentication and full CRUD functionality (Create, Read, Update, Delete).
+
+This is a full-stack Django To-Do application that allows users to manage daily tasks with authentication and complete CRUD functionality.
 
 ---
 
 ## ✨ Features
-- 🔐 User Registration & Login system  
-- ➕ Add new tasks  
-- 📋 View all tasks  
-- ✏️ Edit/update tasks  
-- ❌ Delete tasks  
-- ✔️ Mark tasks as completed  
-- 🎨 Clean and simple UI  
-- 📱 Responsive design  
+
+- User registration
+- User login
+- Create tasks
+- View tasks
+- Update tasks
+- Delete tasks
+- Mark tasks as completed
+- Responsive design
+- Dark mode support
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
-- HTML
-- CSS
-- Bootstrap
-
-**Backend:**
-- Django (Python)
-
-**Database:**
-- SQLite
-
-**Tools:**
-- Git & GitHub
+| Technology | Usage |
+|------------|-------|
+| Python | Backend |
+| Django | Web Framework |
+| HTML | Structure |
+| CSS | Styling |
+| Bootstrap | UI Components |
+| SQLite | Database |
+| Git | Version Control |
+| GitHub | Repository Hosting |
 
 ---
 
-## 📸 Screenshots
-
-### 🔐 Login Page (Light Mode)
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/41c81116-bfa0-4fe2-be30-7d6108a4973c" width="900"/>
-</p>
-
-### 🌙 Login Page (Dark Mode)
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e274e065-2549-4efd-8e20-ef65aad6f5af" width="900"/>
-</p>
-
-### 📝 Register Form (Light Mode)
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1a36ae18-e960-4d54-951e-1fd9535e8f6e" width="500"/>
-</p>
-
-### 🌙 Register Form (Dark Mode)
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/7b8a02f7-327e-42ce-a8f6-ad86b1fb7140" width="500"/>
-</p>
-
-### 🏠 Home Page (Light Mode)
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/58fb7e2d-bdda-4aae-9283-7bb74bbe29b5" width="900"/>
-</p>
-
-### 🌙 Home Page (Dark Mode)
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/cddb527a-e655-466d-a11f-c2615b7708b0" width="900"/>
-</p>
-
-### 📌 Task Form
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/55124d5b-cb54-4a34-89ea-837ace2a86a2" width="500"/>
-</p>
-
-
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the repository
-```bash
-git clone (https://github.com/techiebella/to-do-list.git)
-cd todo-project
-
-## 🌐 Live Demo
-
-🔗 **Live Application:** https://todolistapp-c14l.onrender.com
-
-> **Note:** This app is hosted on Render's free tier. If it has been inactive, the first request may take 30–60 seconds while the server wakes up.
+## 📁 Project Structure
