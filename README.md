@@ -89,3 +89,9 @@ It includes authentication and full CRUD functionality (Create, Read, Update, De
 ```bash
 git clone (https://github.com/techiebella/to-do-list.git)
 cd todo-project
+
+## 🌐 Live Demo
+
+🔗 **Live Application:** https://todolistapp-c14l.onrender.com
+
+> **Note:** This app is hosted on Render's free tier. If it has been inactive, the first request may take 30–60 seconds while the server wakes up.
